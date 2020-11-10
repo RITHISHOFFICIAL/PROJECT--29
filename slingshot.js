@@ -19,20 +19,10 @@ class slingShot{
         if(this.sling.bodyA){
             var pointA = this.sling.bodyA.position;
             var pointB = this.pointB;
-                      
-            stroke(48,22,8);
-            if(pointA.x<250){
-            strokeWeight(7);
-            line(pointA.x-20, pointA.y, pointB.x-10, pointB.y);
-            line(pointA.x-20, pointA.y, pointB.x+30, pointB.y-5);
-                    }
-            else{
-                strokeWeight(3);
-                line(pointA.x+20, pointA.y, pointB.x-10, pointB.y);
-                line(pointA.x+20, pointA.y, pointB.x+30, pointB.y-5);
-                
-            }
-          
+                   
+            strokeWeight(4);
+
+            line(pointA.x,pointA.y,pointB.x,pointB.y)
             
         }
     }

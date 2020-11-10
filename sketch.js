@@ -41,9 +41,9 @@ function setup() {
 	  block21=new block(500,390,40,40);
 	  block22=new block(475,340,40,40);
 
-	  //polygon1=new block(100,200,20,20);
+	polygon1=new polygon(200,300,20);
 
-	  //slingshot1=new slingshot(polygon1.body,{x:100,y:200});
+	sling1=new slingShot(polygon1.body,{x:100,y:200});
 
 	Engine.run(engine);
   
@@ -76,18 +76,19 @@ function draw() {
   block21.display();
   block22.display();
 
-
+ polygon1.display();
+ sling1.display();
  
   drawSprites();
  
 }
 
-//function mouseDragged(){
-   /// Matter.Body.setPosition(bird.body, {x: mouseX , y: mouseY});
-//}
+function mouseDragged(){
+   Matter.Body.setPosition(polygon1.body, {x: mouseX , y: mouseY});
+}
 
 
-//function mouseReleased(){
-   // slingshot.fly();
-//}
+function mouseReleased(){
+    sling1.fly();
+}
 
